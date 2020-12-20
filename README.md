@@ -1,8 +1,11 @@
 # soctunnel  
 
-This program creates a tunnel through social media. Currently only reddit is supported but more sites to follow. 
-Each endpoint of the tunnel connects to a local socket. The endpoint can either listen for local connections or attach
-to a program that's already listening. 
+This program tunnels traffic through social media. Currently only reddit is supported but more sites will be added in the future. In theory, any site that allows comments can be used to send data. Each endpoint of the tunnel connects to a local socket. The endpoint can either listen for local connections or attach
+to a program that's already listening. The data is taken from the local socket, base64 encoded, and then posted to social media. On the other side of the tunnel the client retrieves the social media post, base64 decodes the data, and then sends it to the local socket.
+
+Possible Use Cases:  
+- bypassing domain whitelisting
+- blending in with normal user traffic
 
 
 <h2>Command line arguments:</h2>  
