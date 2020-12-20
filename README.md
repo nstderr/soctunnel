@@ -95,7 +95,7 @@ Computer 2:
     
     ./soctunnel.py -a -p 2222  
 
-Note: -a flag because we already have netcat listening on a local port on each computer. -l flagà because one of the computers needs to pass the -l flag to listen on the social media site. It doesn't matter which one.  
+Note: -a flag because netcat is already listening on a local port on each computer. -l flag because one of the computers needs to pass the -l flag to listen on the social media site. It doesn't matter which one.  
 
 **Closing the connection:**  
 At this point the tunnel will be built and the netcat clients will be able to talk to each other. To close the connection, on one endpoint send SIGINT (crtl-c) to the local program (netcat in the above example). This will also close the other side.
